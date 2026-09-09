@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Multimedia - Inicio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="contacto.css">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #029dea;
+      color: #ffffff;;
+      color: #333333;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #333333;
+      border-bottom: #0099e6 3px solid;
+      padding: 25px 0 ;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    header h1 span {
+      color: #0099e6;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    header nav li {
+      margin-left: 20px;
+    }
+
+    header nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+
+    header nav li.active a,
+    header nav a:hover {
+      color: #0099e6;
+    }
+
+
+    .hero {
+      min-height: 280px;
+
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                  url("logo_brush.png") no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 13px;
+      max-width: 650px;
+      line-height: 1.4;
+    }
+
+    .newsletter {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 15px 0;
+    }
+
+    .newsletter-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .newsletter h2 {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .newsletter form {
+      display: flex;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 6px 10px;
+      height: 32px;
+      width: 200px;
+      border: none;
+      outline: none;
+      font-size: 11px;
+    }
+
+    .newsletter button {
+      height: 32px;
+      background-color: #e8491d;
+      border: none;
+      padding: 0 15px;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 11px;
+    }
+
+    .services {
+      padding: 35px 0 50px 0;
+      background-color: #f4f4f4;
+    }
+
+    .services-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .box {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .box img {
+      height: 70px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+
+    .box h3 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .box p {
+      font-size: 11px;
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #029dea;
+      color: #ffffff;
+      text-align: center;
+      padding: 45px 0;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <h1>Diseño <span>Multimedia</span></h1>
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">INICIO</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Expertos en Tecnologías Web</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima beatae aspernatur alias, commodi molestiae accusantium.</p>
+  </section>
+
+
+  <section class="newsletter">
+    <div class="container newsletter-content">
+      <h2>Subscribete a nuestro boletín</h2>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Ingrese el Email..." required>
+        <button type="submit">Subscribete</button>
+      </form>
+    </div>
+  </section>
+
+
+  <section class="services">
+    <div class="container services-content">
+      
+      <div class="box">
+
+        <img src="mapaGoogle.png" alt="HTML5">
+        <h3>HTML5</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultrices</p>
+      </div>
+
+      <div class="box">
+
+        <img src="logo_html.png" alt="CSS3">
+        <h3>CSS3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultrices</p>
+      </div>
+
+      <div class="box">
+
+        <img src="logo_css.png" alt="Diseño Gráfico">
+        <h3>Diseño Gráfico</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultrices</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Graphel Desarrollo Web, Copyright &copy; 2017</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Multimedia - Contacto</title>
+  <style>
+    /* RESETEO BÁSICO */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333333;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HEADER / CABECERA */
+    header {
+      background-color: #333333;
+      border-bottom: #0099e6 3px solid;
+      padding: 25px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    header h1 span {
+      color: #0099e6;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    header nav li {
+      margin-left: 20px;
+    }
+
+    header nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+    }
+
+    header nav li.active a,
+    header nav a:hover {
+      color: #0099e6;
+    }
+
+    /* NEWSLETTER / BOLETÍN */
+    .newsletter {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 25px 0 25px 0;
+    }
+
+    .newsletter-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .newsletter h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .newsletter form {
+      display: flex;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 8px 12px;
+      height: 36px;
+      width: 200px;
+      border: 1px solid #cccccc;
+      outline: none;
+      font-size: 12px;
+    }
+
+    .newsletter button {
+      height: 36px;
+      background-color: #e8491d;
+      border: none;
+      padding: 0 20px;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    /* CONTENIDO PRINCIPAL (CONTACTO) */
+    .main-section {
+      padding: 30px 0 40px 0;
+      background-color: #f4f4f4;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 30px;
+    }
+
+    /* COLUMNA IZQUIERDA: FORMULARIO */
+    .contact-form-container {
+      flex: 2;
+    }
+
+    .contact-form-container h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      color: #333333;
+      margin-bottom: 4px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #a6a6a6;
+      background-color: #ffffff;
+      font-size: 12px;
+      color: #666666;
+      outline: none;
+    }
+
+    .form-group textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      height: 38px;
+      background-color: #e8491d;
+      color: #ffffff;
+      border: none;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .btn-submit:hover {
+      background-color: #cf3d13;
+    }
+
+    /* COLUMNA DERECHA: ASIDE / SIDEBAR */
+    .sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-box {
+      background-color: #303a40;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .info-box h4 {
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .info-box p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    /* MAPA */
+    .map-box {
+      width: 100%;
+      height: 260px;
+      border: 1px solid #cccccc;
+      overflow: hidden;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0099e6;
+      color: #ffffff;
+      text-align: center;
+      padding: 16px 0;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-content">
+      <h1>Diseño <span>Multimedia</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li class="active"><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BOLETÍN -->
+  <section class="newsletter">
+    <div class="container newsletter-content">
+      <h2>Subscríbete a nuestro boletín</h2>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Ingrese el Email..." required>
+        <button type="submit">Subscribete</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section class="main-section">
+    <div class="container main-content">
+      
+      <!-- FORMULARIO DE CONTACTO -->
+      <div class="contact-form-container">
+        <h3>Contacto</h3>
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Ingresa tu nombre">
+          </div>
+          
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Ingresa tu email">
+          </div>
+          
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="Ingresa tu teléfono">
+          </div>
+          
+          <div class="form-group">
+            <label>Celular</label>
+            <input type="tel" placeholder="Ingresa tu celular">
+          </div>
+          
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea></textarea>
+          </div>
+          
+          <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+      </div>
+
+      <!-- BARRA LATERAL (QUE HACEMOS + MAPA) -->
+      <aside class="sidebar">
+        <div class="info-box">
+          <h4>Que hacemos</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat. Phasellus sit amet ex ipsum. Praesent pharetra tincidunt tempor. Etiam velit eros, dapibus eget porta in, lacinia et magna.</p>
+        </div>
+
+        <div class="map-box">
+          <!-- Puedes usar una imagen estática 'mapa.jpg' o dejar este mapa interactivo -->
+          <iframe src="mapa.jpg" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Graphel Desarrollo Web, Copyright &copy; 2017</p>
+  </footer>
+
+</body>
+</html>
